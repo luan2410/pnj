@@ -1,0 +1,17 @@
+<svg width="800" height="1000" viewBox="0 0 800 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="1000" rx="56" fill="#101010"/>
+  <circle cx="400" cy="270" r="210" fill="url(#g1)" fill-opacity="0.95"/>
+  <circle cx="400" cy="270" r="118" fill="#F2E7D0" fill-opacity="0.95"/>
+  <circle cx="400" cy="270" r="88" fill="#FFFDF7"/>
+  <circle cx="400" cy="270" r="26" fill="#D6B47A"/>
+  <path d="M230 540C230 474.83 282.83 422 348 422H452C517.17 422 570 474.83 570 540V610C570 701.679 495.679 776 404 776H396C304.321 776 230 701.679 230 610V540Z" fill="#D1AF77"/>
+  <path d="M286 536C286 497.34 317.34 466 356 466H444C482.66 466 514 497.34 514 536V604C514 668.065 462.065 720 398 720H402C337.935 720 286 668.065 286 604V536Z" fill="#1E1A16"/>
+  <ellipse cx="400" cy="870" rx="210" ry="48" fill="#000" fill-opacity="0.28"/>
+  <defs>
+    <radialGradient id="g1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(400 230) rotate(90) scale(260)">
+      <stop stop-color="#FFFDF6"/>
+      <stop offset="0.45" stop-color="#D8B983"/>
+      <stop offset="1" stop-color="#101010" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>
