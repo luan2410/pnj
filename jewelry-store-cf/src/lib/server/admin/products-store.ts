@@ -1,4 +1,4 @@
-﻿import { products } from "@/lib/site-data";
+﻿import { catalogProducts } from "@/lib/catalog-data";
 
 export type AdminProductRecord = {
   slug: string;
@@ -15,7 +15,7 @@ declare global {
 }
 
 function seedStore(): AdminProductRecord[] {
-  return products.map((product) => ({
+  return catalogProducts.map((product) => ({
     slug: product.slug,
     name: product.name,
     category: product.category,

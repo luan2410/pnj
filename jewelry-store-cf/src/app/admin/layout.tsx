@@ -11,7 +11,7 @@ const adminLinks = [
 export default function AdminLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <div className="min-h-screen bg-[#070707] text-white">
-      <div className="mx-auto grid w-full max-w-7xl gap-8 px-6 py-10 lg:grid-cols-[280px_1fr] lg:px-10">
+      <div className="mx-auto grid w-full max-w-[120rem] gap-8 px-6 py-10 lg:grid-cols-[280px_1fr] lg:px-10">
         <aside className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-6">
           <p className="text-xs uppercase tracking-[0.35em] text-[#d4b277]">Admin</p>
           <h1 className="mt-4 text-2xl font-semibold text-white">Maison Console</h1>

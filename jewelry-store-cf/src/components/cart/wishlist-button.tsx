@@ -8,10 +8,12 @@ export function WishlistButton({ slug }: Readonly<{ slug: string }>) {
 
   return (
     <button
-      className={`rounded-full border px-7 py-3 text-sm transition ${active ? "border-[#d4b277] text-[#f3e7cf]" : "border-white/15 text-white/85 hover:border-[#d4b277] hover:text-[#f3e7cf]"}`}
+      className={`inline-flex h-11 w-11 items-center justify-center rounded-full border text-sm transition ${active ? "border-[#d4b277] bg-[#d4b277]/12 text-[#f3e7cf]" : "border-white/15 text-white/70 hover:border-[#d4b277] hover:text-[#f3e7cf]"}`}
       onClick={() => toggleWishlist(slug)}
+      aria-label={active ? "Bỏ lưu yêu thích" : "Lưu vào wishlist"}
+      title={active ? "Đã lưu yêu thích" : "Lưu vào wishlist"}
     >
-      {active ? "Đã lưu yêu thích" : "Lưu vào wishlist"}
+      {active ? "♥" : "♡"}
     </button>
   );
 }

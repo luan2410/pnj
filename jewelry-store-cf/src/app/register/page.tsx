@@ -25,7 +25,7 @@ export default function RegisterPage() {
           title="Tạo tài khoản để lưu wishlist và theo dõi đơn hàng."
           description="Trang đăng ký được thiết kế theo phong cách boutique: rõ ràng, sang trọng và sẵn sàng kết nối auth thật ở bước backend."
         />
-        <section className="mx-auto grid w-full max-w-7xl gap-6 px-6 py-16 lg:grid-cols-[1fr_0.95fr] lg:px-10">
+        <section className="mx-auto grid w-full max-w-[120rem] gap-6 px-6 py-16 lg:grid-cols-[1fr_0.95fr] lg:px-10">
           <div className="rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] p-8">
             <p className="text-xs uppercase tracking-[0.35em] text-[#d4b277]">Member Benefits</p>
             <h2 className="mt-5 text-4xl font-semibold text-white">Tài khoản riêng cho khách hàng cần trải nghiệm liền mạch hơn.</h2>

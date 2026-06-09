@@ -13,7 +13,7 @@ export default function ContactPage() {
           title="Tư vấn riêng để khách hàng yên tâm trước khi chốt món trang sức quan trọng."
           description="Trang liên hệ giờ đã có bố cục landing hoàn chỉnh: thông tin showroom, cách thức đặt lịch và các điểm chạm niềm tin cần thiết cho khách hàng cao cấp."
         />
-        <section className="mx-auto grid w-full max-w-7xl gap-6 px-6 py-16 lg:grid-cols-[0.9fr_1.1fr] lg:px-10">
+        <section className="mx-auto grid w-full max-w-[120rem] gap-6 px-6 py-16 lg:grid-cols-[0.9fr_1.1fr] lg:px-10">
           <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-8">
             <p className="text-xs uppercase tracking-[0.35em] text-[#d4b277]">Showroom</p>
             <h2 className="mt-5 text-3xl font-semibold text-white">Maison Aurum Private Studio</h2>

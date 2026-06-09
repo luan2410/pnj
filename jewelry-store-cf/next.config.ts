@@ -10,8 +10,13 @@ process.env.XDG_DATA_HOME ??= path.join(cloudflareHome, "data");
 
 const nextConfig: NextConfig = {
   outputFileTracingRoot: projectRoot,
-  turbopack: {
-    root: projectRoot,
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "bizweb.dktcdn.net",
+      },
+    ],
   },
 };
 

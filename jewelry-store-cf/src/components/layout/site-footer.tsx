@@ -5,7 +5,7 @@ import { contactDetails, siteConfig } from "@/lib/site-data";
 export function SiteFooter() {
   return (
     <footer className="border-t border-white/10 bg-[#090909]">
-      <div className="mx-auto grid w-full max-w-7xl gap-10 px-6 py-14 text-sm text-white/70 md:grid-cols-2 lg:grid-cols-4 lg:px-10">
+      <div className="mx-auto grid w-full max-w-[120rem] gap-10 px-6 py-14 text-sm text-white/70 md:grid-cols-2 lg:grid-cols-4 lg:px-10">
         <div className="space-y-4">
           <p className="text-xs uppercase tracking-[0.35em] text-[#d4b277]">{siteConfig.name}</p>
           <p className="max-w-sm leading-7">

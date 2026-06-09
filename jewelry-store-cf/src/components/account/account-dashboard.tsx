@@ -1,8 +1,8 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 
-import { products } from "@/lib/site-data";
+import { catalogProducts } from "@/lib/catalog-data";
 import { useCart } from "@/components/providers/cart-provider";
 
 function formatCurrency(value: number) {
@@ -11,7 +11,7 @@ function formatCurrency(value: number) {
 
 function AccountSkeleton() {
   return (
-    <section className="mx-auto grid w-full max-w-7xl gap-6 px-6 py-20 lg:grid-cols-[280px_1fr] lg:px-10">
+    <section className="mx-auto grid w-full max-w-[120rem] gap-6 px-6 py-20 lg:grid-cols-[288px_minmax(0,1fr)] lg:px-10">
       <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 animate-pulse">
         <div className="h-6 w-1/2 rounded bg-white/10" />
         <div className="mt-4 space-y-3">{[1, 2, 3, 4].map((item) => <div key={item} className="h-4 rounded bg-white/10" />)}</div>
@@ -50,12 +50,12 @@ function EmptyWishlistState() {
 
 export function AccountDashboard() {
   const { orders, wishlist, sessionUser, signOutDemo, isHydrated } = useCart();
-  const wishlistedProducts = products.filter((product) => wishlist.includes(product.slug));
+  const wishlistedProducts = catalogProducts.filter((product) => wishlist.includes(product.slug));
 
   if (!isHydrated) return <AccountSkeleton />;
 
   return (
-    <section className="mx-auto grid w-full max-w-7xl gap-6 px-6 py-20 lg:grid-cols-[280px_1fr] lg:px-10">
+    <section className="mx-auto grid w-full max-w-[120rem] gap-6 px-6 py-20 lg:grid-cols-[288px_minmax(0,1fr)] lg:px-10">
       <aside className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 text-white/72">
         <p className="text-white">Hồ sơ khách hàng</p>
         <p className="mt-3">Lịch sử đơn hàng</p>
@@ -108,3 +108,4 @@ export function AccountDashboard() {
     </section>
   );
 }
+

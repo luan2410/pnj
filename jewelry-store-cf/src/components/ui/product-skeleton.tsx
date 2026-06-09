@@ -30,7 +30,7 @@ export function ProductGridSkeleton({ count = 6 }: Readonly<{ count?: number }>)
 
 export function ProductDetailSkeleton() {
   return (
-    <section className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[0.95fr_1.05fr] lg:px-10">
+    <section className="mx-auto grid w-full max-w-[120rem] gap-12 px-6 py-20 lg:grid-cols-[0.95fr_1.05fr] lg:px-10">
       <div className="rounded-[2.5rem] border border-white/10 bg-white/[0.03] p-6 animate-pulse">
         <div className="aspect-[4/5] rounded-[2rem] bg-white/10" />
         <div className="mt-6 grid gap-3 sm:grid-cols-3">

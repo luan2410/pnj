@@ -12,7 +12,7 @@ export default function Home() {
       <SiteHeader />
       <main className="bg-[#080808] text-white">
         <HeroSection />
-        <div className="mx-auto w-full max-w-7xl px-6 lg:px-10">
+        <div className="mx-auto w-full max-w-[120rem] px-6 lg:px-10">
           <CollectionsSection />
           <FeaturedProductsSection />
           <BrandPillarsSection />

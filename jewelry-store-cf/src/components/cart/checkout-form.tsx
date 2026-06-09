@@ -10,7 +10,7 @@ function formatCurrency(value: number) {
 
 function CheckoutSkeleton() {
   return (
-    <section className="mx-auto grid w-full max-w-7xl gap-8 px-6 py-20 lg:grid-cols-[1fr_380px] lg:px-10">
+    <section className="mx-auto grid w-full max-w-[120rem] gap-8 px-6 py-20 lg:grid-cols-[minmax(0,1.18fr)_420px] lg:px-10">
       <div className="grid gap-5 rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 animate-pulse">
         {[1, 2, 3, 4].map((item) => <div key={item} className="space-y-2"><div className="h-4 w-24 rounded bg-white/10" /><div className="h-12 rounded-full bg-white/10" /></div>)}
         <div className="h-32 rounded-[1.5rem] bg-white/10" />
@@ -30,7 +30,7 @@ export function CheckoutForm() {
   if (!isHydrated) return <CheckoutSkeleton />;
 
   return (
-    <section className="mx-auto grid w-full max-w-7xl gap-8 px-6 py-20 lg:grid-cols-[1fr_380px] lg:px-10">
+    <section className="mx-auto grid w-full max-w-[120rem] gap-8 px-6 py-20 lg:grid-cols-[minmax(0,1.18fr)_420px] lg:px-10">
       <form className="grid gap-5 rounded-[2rem] border border-white/10 bg-white/[0.03] p-6" onSubmit={(event) => { event.preventDefault(); const order = placeOrder(); setSubmittedOrderId(order?.id ?? null); setCouponInput(""); }}>
         {[ ["fullName", "Họ và tên"], ["phone", "Số điện thoại"], ["email", "Email"], ["address", "Địa chỉ giao hàng"] ].map(([field, label]) => (
           <label key={field} className="grid gap-2 text-sm text-white/70">{label}<input value={checkoutDetails[field as keyof typeof checkoutDetails]} onChange={(event) => updateCheckoutDetails({ [field]: event.target.value })} className="rounded-full border border-white/10 bg-black/30 px-5 py-3 text-white outline-none transition focus:border-[#d4b277]" /></label>

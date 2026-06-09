@@ -27,7 +27,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
     <>
       <SiteHeader />
       <main className="min-h-screen bg-[#080808] text-white">
-        <section className="mx-auto grid w-full max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[0.95fr_1.05fr] lg:px-10">
+        <section className="mx-auto grid w-full max-w-[120rem] gap-12 px-6 py-20 lg:grid-cols-[0.95fr_1.05fr] lg:px-10">
           <div className="rounded-[2.5rem] border border-white/10 bg-[radial-gradient(circle_at_35%_20%,rgba(212,178,119,0.42),transparent_25%),rgba(255,255,255,0.03)] p-6">
             <ProductVisual slug={product.slug} name={product.name} className="aspect-[4/5] rounded-[2rem]" />
             <div className="mt-6 grid gap-3 sm:grid-cols-3">
@@ -63,7 +63,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
             </div>
           </div>
         </section>
-        <section className="mx-auto w-full max-w-7xl px-6 pb-10 lg:px-10">
+        <section className="mx-auto w-full max-w-[120rem] px-6 pb-10 lg:px-10">
           <div className="flex items-center justify-between gap-4">
             <h2 className="text-3xl font-semibold text-white">Thiết kế liên quan</h2>
             <Link href="/shop" className="text-sm text-[#f3e7cf] transition hover:text-white">Quay lại catalog →</Link>

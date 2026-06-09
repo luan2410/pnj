@@ -1,9 +1,9 @@
-import { products } from "@/lib/site-data";
+﻿import { catalogProducts } from "@/lib/catalog-data";
 
-export type CatalogProduct = (typeof products)[number];
+export type CatalogProduct = (typeof catalogProducts)[number];
 
 export async function getCatalogProducts(): Promise<CatalogProduct[]> {
-  return [...products];
+  return [...catalogProducts];
 }
 
 export async function getCatalogProductBySlug(slug: string): Promise<CatalogProduct | null> {

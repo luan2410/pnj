@@ -1,6 +1,6 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
-import { featuredProducts } from "@/lib/site-data";
+import { featuredCatalogProducts } from "@/lib/catalog-data";
 import { ProductCard } from "@/components/ui/product-card";
 import { SectionHeading } from "@/components/ui/section-heading";
 
@@ -17,11 +17,12 @@ export function FeaturedProductsSection() {
           Xem toàn bộ catalog →
         </Link>
       </div>
-      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        {featuredProducts.map((product) => (
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {featuredCatalogProducts.map((product) => (
           <ProductCard key={product.slug} {...product} />
         ))}
       </div>
     </section>
   );
 }
+

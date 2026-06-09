@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/site-data";
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden border-b border-white/10 bg-[radial-gradient(circle_at_top,rgba(212,178,119,0.18),transparent_32%),linear-gradient(180deg,#0f0f10_0%,#080808_100%)]">
-      <div className="mx-auto grid min-h-[82vh] w-full max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[1.05fr_0.95fr] lg:px-10 lg:py-24">
+      <div className="mx-auto grid min-h-[82vh] w-full max-w-[120rem] gap-16 px-6 py-20 lg:grid-cols-[1.08fr_0.92fr] lg:px-10 lg:py-24">
         <div className="flex flex-col justify-center">
           <p className="text-xs uppercase tracking-[0.4em] text-[#d4b277]">Luxury storefront on Cloudflare</p>
           <h1 className="mt-6 max-w-3xl text-5xl font-semibold leading-tight tracking-[0.04em] text-white md:text-6xl">
@@ -43,7 +43,7 @@ export function HeroSection() {
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               <div className="rounded-[1.5rem] border border-white/10 bg-black/30 p-5">
                 <p className="text-xs uppercase tracking-[0.3em] text-[#d4b277]">Storefront</p>
-                <p className="mt-3 text-white">Homepage, collections, shop, PDP, cart, checkout, account.</p>
+                <p className="mt-3 text-white">Trang ch?, b? s?u t?p, c?a h?ng, chi ti?t s?n ph?m v? checkout li?n m?ch.</p>
               </div>
               <div className="rounded-[1.5rem] border border-white/10 bg-black/30 p-5">
                 <p className="text-xs uppercase tracking-[0.3em] text-[#d4b277]">Operations</p>

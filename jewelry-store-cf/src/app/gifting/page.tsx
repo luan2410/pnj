@@ -15,8 +15,8 @@ export default function GiftingPage() {
           title="Giải pháp quà tặng cao cấp cho những dịp cần sự tinh tế và ghi nhớ."
           description="Trang gifting được dựng như một campaign landing linh hoạt: đủ đẹp để chạy theo mùa, đủ rõ để đẩy chuyển đổi theo từng dịp tặng quà."
         />
-        <section className="mx-auto w-full max-w-7xl px-6 py-16 lg:px-10">
-          <div className="grid gap-6 lg:grid-cols-3">
+        <section className="mx-auto w-full max-w-[120rem] px-6 py-16 lg:px-10">
+          <div className="grid gap-7 lg:grid-cols-3">
             {giftingMoments.map((item, index) => (
               <article key={item.title} className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-8">
                 <div className={`mb-8 aspect-[4/3] rounded-[1.75rem] border border-white/10 ${index === 0 ? "bg-[radial-gradient(circle_at_50%_22%,rgba(212,178,119,0.58),transparent_18%),rgba(255,255,255,0.03)]" : index === 1 ? "bg-[radial-gradient(circle_at_45%_26%,rgba(255,255,255,0.28),transparent_18%),rgba(212,178,119,0.14)]" : "bg-[radial-gradient(circle_at_58%_26%,rgba(255,182,193,0.32),transparent_18%),rgba(255,255,255,0.03)]"}`} />

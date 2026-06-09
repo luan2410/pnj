@@ -12,7 +12,7 @@ function formatCurrency(value: number) {
 
 function CartSkeleton() {
   return (
-    <section className="mx-auto grid w-full max-w-7xl gap-8 px-6 py-20 lg:grid-cols-[1fr_380px] lg:px-10">
+    <section className="mx-auto grid w-full max-w-[120rem] gap-8 px-6 py-20 lg:grid-cols-[minmax(0,1.18fr)_420px] lg:px-10">
       <div className="space-y-4">
         {[1, 2].map((item) => (
           <div key={item} className="flex gap-5 rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 animate-pulse">
@@ -57,7 +57,7 @@ export function CartView() {
   }
 
   return (
-    <section className="mx-auto grid w-full max-w-7xl gap-8 px-6 py-20 lg:grid-cols-[1fr_380px] lg:px-10">
+    <section className="mx-auto grid w-full max-w-[120rem] gap-8 px-6 py-20 lg:grid-cols-[minmax(0,1.18fr)_420px] lg:px-10">
       <div className="space-y-4">
         {items.map((item) => (
           <article key={item.slug} className="flex gap-5 rounded-[2rem] border border-white/10 bg-white/[0.03] p-6">

@@ -10,7 +10,7 @@ export default function AdminProductsPage() {
   return (
     <main className="min-h-screen bg-[#080808] text-white">
       <PageIntro eyebrow="Admin Products" title="Quản lý sản phẩm, biến thể, chất liệu và tồn kho." description="Trang quản trị sản phẩm giờ đã có bố cục rõ ràng hơn để dễ chuyển sang CRUD, SEO, media và inventory thật." />
-      <section className="mx-auto w-full max-w-7xl px-6 py-12 lg:px-10">
+      <section className="mx-auto w-full max-w-[120rem] px-6 py-12 lg:px-10">
         <div className="mb-6 flex justify-end">
           <Link href="/admin/products/new" className="rounded-full bg-[#d4b277] px-6 py-3 text-sm font-medium text-black transition hover:bg-[#e5c68e]">
             Tạo sản phẩm mới

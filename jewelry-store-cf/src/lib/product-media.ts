@@ -1,17 +1,6 @@
-export const productMediaBySlug = {
-  "radiant-sol-ring": {
-    src: "/products/radiant-sol-ring.svg",
-    alt: "Radiant Sol Ring preview",
-  },
-  "aurum-line-necklace": {
-    src: "/products/aurum-line-necklace.svg",
-    alt: "Aurum Line Necklace preview",
-  },
-  "celeste-drop-earrings": {
-    src: "/products/celeste-drop-earrings.svg",
-    alt: "Celeste Drop Earrings preview",
-  },
-} as const;
+﻿import { catalogProductMediaBySlug } from "@/lib/catalog-data";
+
+export const productMediaBySlug = catalogProductMediaBySlug;
 
 export function getProductMedia(slug: string) {
   return productMediaBySlug[slug as keyof typeof productMediaBySlug] ?? {

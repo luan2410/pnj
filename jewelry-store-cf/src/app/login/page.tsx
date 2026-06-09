@@ -59,7 +59,7 @@ export default function LoginPage() {
           title="Đăng nhập để quản lý đơn hàng, wishlist và lịch sử tư vấn."
           description="Auth wiring hiện dùng session demo local, nhưng phần giao diện đã hoàn thiện để thay sang auth provider thật ở bước backend."
         />
-        <section className="mx-auto grid w-full max-w-7xl gap-6 px-6 py-16 lg:grid-cols-[0.9fr_1.1fr] lg:px-10">
+        <section className="mx-auto grid w-full max-w-[120rem] gap-6 px-6 py-16 lg:grid-cols-[0.9fr_1.1fr] lg:px-10">
           <div className="rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(212,178,119,0.14),rgba(255,255,255,0.02))] p-8">
             <p className="text-xs uppercase tracking-[0.35em] text-[#d4b277]">Private Account</p>
             <h2 className="mt-5 text-4xl font-semibold text-white">Một không gian riêng để theo dõi hành trình mua sắm.</h2>

@@ -15,8 +15,8 @@ export default function CollectionsPage() {
           title="Mỗi bộ sưu tập là một câu chuyện thẩm mỹ, dịp mua và cảm xúc khác nhau."
           description="Trang collections được hoàn thiện như một showroom số: giúp khách hàng định hướng nhanh theo nhu cầu thay vì chỉ duyệt danh mục sản phẩm rời rạc."
         />
-        <section className="mx-auto w-full max-w-7xl px-6 py-16 lg:px-10">
-          <div className="grid gap-6 lg:grid-cols-3">
+        <section className="mx-auto w-full max-w-[120rem] px-6 py-16 lg:px-10">
+          <div className="grid gap-7 lg:grid-cols-3">
             {featuredCollections.map((collection, index) => (
               <article key={collection.title} className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-8">
                 <div className={`mb-8 aspect-[4/3] rounded-[1.75rem] border border-white/10 ${index === 0 ? "bg-[radial-gradient(circle_at_35%_25%,rgba(212,178,119,0.7),transparent_18%),rgba(255,255,255,0.03)]" : index === 1 ? "bg-[radial-gradient(circle_at_50%_30%,rgba(255,255,255,0.35),transparent_16%),rgba(212,178,119,0.12)]" : "bg-[radial-gradient(circle_at_65%_28%,rgba(148,196,255,0.48),transparent_18%),rgba(255,255,255,0.03)]"}`} />

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useCart } from "@/components/providers/cart-provider";
 
@@ -7,7 +7,7 @@ export function ProductReviews({ slug }: Readonly<{ slug: string }>) {
   const reviews = getReviews(slug);
 
   return (
-    <section className="mx-auto w-full max-w-7xl px-6 pb-20 lg:px-10">
+    <section className="mx-auto w-full max-w-[120rem] px-6 pb-20 lg:px-10">
       <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-8">
         <p className="text-xs uppercase tracking-[0.35em] text-[#d4b277]">Customer Reviews</p>
         <h2 className="mt-4 text-3xl font-semibold text-white">Khách hàng nói gì về thiết kế này</h2>

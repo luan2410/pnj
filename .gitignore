@@ -1,0 +1,12 @@
+﻿node_modules/
+.next/
+out/
+dist/
+build/
+.vercel/
+.cache/
+.turbo/
+coverage/
+*.log
+.DS_Store
+Thumbs.db

@@ -13,6 +13,33 @@ function parsePrice(price: string) {
   return Number(price.replace(/[^\d]/g, ""));
 }
 
+function SelectField({
+  label,
+  value,
+  options,
+  onChange,
+}: {
+  label: string;
+  value: string;
+  options: readonly string[];
+  onChange: (value: string) => void;
+}) {
+  return (
+    <label className="grid gap-2 text-sm text-white/62">
+      <span>{label}</span>
+      <div className="rounded-[1.25rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] px-4 py-1.5">
+        <select
+          value={value}
+          onChange={(event) => onChange(event.target.value)}
+          className="w-full bg-transparent py-2.5 text-sm text-white outline-none"
+        >
+          {options.map((option) => <option key={option} value={option} className="bg-[#111]">{option}</option>)}
+        </select>
+      </div>
+    </label>
+  );
+}
+
 export function ShopCatalog({ products }: Readonly<{ products: CatalogProduct[] }>) {
   const [category, setCategory] = useState<(typeof categoryOptions)[number]>("Tất cả");
   const [material, setMaterial] = useState<(typeof materialOptions)[number]>("Tất cả");
@@ -51,44 +78,36 @@ export function ShopCatalog({ products }: Readonly<{ products: CatalogProduct[] 
   }, [category, material, priceRange, products, sortBy]);
 
   return (
-    <section className="mx-auto grid w-full max-w-7xl gap-6 px-6 py-20 lg:grid-cols-[300px_1fr] lg:px-10">
-      <aside className="h-fit rounded-[2rem] border border-white/10 bg-white/[0.03] p-6">
-        <p className="text-sm uppercase tracking-[0.25em] text-[#d4b277]">Bộ lọc</p>
+    <section className="mx-auto grid w-full max-w-[120rem] gap-8 px-6 py-10 lg:grid-cols-[272px_minmax(0,1fr)] lg:px-10 xl:grid-cols-[280px_minmax(0,1fr)] 2xl:grid-cols-[288px_minmax(0,1fr)]">
+      <aside className="h-fit rounded-[2.25rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] p-6 lg:sticky lg:top-28">
+        <div className="border-b border-white/10 pb-5">
+          <p className="text-[11px] uppercase tracking-[0.28em] text-[#d4b277]">Refine Selection</p>
+          <h2 className="mt-3 text-2xl font-medium text-white">Tìm thiết kế phù hợp</h2>
+          <p className="mt-3 text-sm leading-7 text-white/60">Lọc theo dịp mua, chất liệu và mức giá để rút ngắn shortlist nhanh hơn.</p>
+        </div>
         <div className="mt-6 grid gap-4">
-          <label className="grid gap-2 text-sm text-white/68">
-            Loại trang sức
-            <select value={category} onChange={(event) => setCategory(event.target.value as (typeof categoryOptions)[number])} className="rounded-full border border-white/10 bg-black/30 px-4 py-3 text-white outline-none">
-              {categoryOptions.map((option) => <option key={option} value={option}>{option}</option>)}
-            </select>
-          </label>
-          <label className="grid gap-2 text-sm text-white/68">
-            Chất liệu
-            <select value={material} onChange={(event) => setMaterial(event.target.value as (typeof materialOptions)[number])} className="rounded-full border border-white/10 bg-black/30 px-4 py-3 text-white outline-none">
-              {materialOptions.map((option) => <option key={option} value={option}>{option}</option>)}
-            </select>
-          </label>
-          <label className="grid gap-2 text-sm text-white/68">
-            Khoảng giá
-            <select value={priceRange} onChange={(event) => setPriceRange(event.target.value as (typeof priceOptions)[number])} className="rounded-full border border-white/10 bg-black/30 px-4 py-3 text-white outline-none">
-              {priceOptions.map((option) => <option key={option} value={option}>{option}</option>)}
-            </select>
-          </label>
+          <SelectField label="Loại trang sức" value={category} options={categoryOptions} onChange={(value) => setCategory(value as (typeof categoryOptions)[number])} />
+          <SelectField label="Chất liệu" value={material} options={materialOptions} onChange={(value) => setMaterial(value as (typeof materialOptions)[number])} />
+          <SelectField label="Khoảng giá" value={priceRange} options={priceOptions} onChange={(value) => setPriceRange(value as (typeof priceOptions)[number])} />
         </div>
       </aside>
-      <div>
-        <div className="mb-6 flex flex-col gap-4 rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-4 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-sm text-white/60">{filteredProducts.length} sản phẩm phù hợp</p>
-          <label className="flex items-center gap-3 text-sm text-white/68">
-            Sắp xếp
-            <select value={sortBy} onChange={(event) => setSortBy(event.target.value)} className="rounded-full border border-white/10 bg-black/30 px-4 py-3 text-white outline-none">
-              <option value="featured">Nổi bật</option>
-              <option value="price-asc">Giá tăng dần</option>
-              <option value="price-desc">Giá giảm dần</option>
-              <option value="name">Tên A-Z</option>
+      <div className="min-w-0">
+        <div className="mb-7 flex flex-col gap-4 rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p className="text-sm text-white/52">Boutique Selection</p>
+            <p className="mt-1 text-base text-white/80">{filteredProducts.length} thiết kế đang sẵn sàng để bạn khám phá</p>
+          </div>
+          <div className="flex items-center gap-3 rounded-full border border-white/10 bg-black/20 px-4 py-2.5 text-sm text-white/68">
+            <span className="whitespace-nowrap">Sắp xếp theo</span>
+            <select value={sortBy} onChange={(event) => setSortBy(event.target.value)} className="bg-transparent pr-2 text-white outline-none">
+              <option value="featured" className="bg-[#111]">Nổi bật</option>
+              <option value="price-asc" className="bg-[#111]">Giá tăng dần</option>
+              <option value="price-desc" className="bg-[#111]">Giá giảm dần</option>
+              <option value="name" className="bg-[#111]">Tên A-Z</option>
             </select>
-          </label>
+          </div>
         </div>
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-7 md:grid-cols-2 min-[1280px]:grid-cols-3">
           {filteredProducts.map((product) => (
             <ProductCard key={product.slug} {...product} />
           ))}
